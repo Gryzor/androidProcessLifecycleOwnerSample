@@ -15,11 +15,11 @@ class SampleLifecycleListener : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onMoveToForeground() {
-        Log.d("LIFECYCLE", "Returning to foreground…")
+        Log.d("SampleLifecycle", "Returning to foreground…")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onMoveToBackground() {
-        Log.d("LIFECYCLE", "Moving to background…")
+        Log.d("SampleLifecycle", "Moving to background…")
     }
 }
