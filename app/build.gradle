@@ -29,8 +29,14 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$constraintlayout_version"
 
     // Google Lifecycle Components
-    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+
+    // "runtime" doesn't work atm, use `extensions` for now.
+    // implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+
+    // This gives an error atm, so use the standard `compiler` version above.
+    // implementation "android.arch.lifecycle:common-java8:1.1.1"
 
     // TESTING LIBS
     testImplementation 'junit:junit:4.12'
