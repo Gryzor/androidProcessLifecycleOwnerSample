@@ -1,5 +1,6 @@
 # Android ProcessLifecycleOwner Sample app
 This sample app, demonstrates the new ProcessLifecycleOwner from Google.
+Accompanying "blog post": https://medium.com/@Gryzor/detecting-when-an-android-app-backgrounds-in-2018-4b5a94977d5c
 
 ## Written With:
 
