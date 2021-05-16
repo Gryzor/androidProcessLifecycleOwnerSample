@@ -1,7 +1,7 @@
 package com.marconcini.processlifecyclesample
 
 import android.app.Application
-import android.arch.lifecycle.ProcessLifecycleOwner
+import androidx.lifecycle.ProcessLifecycleOwner
 
 class SampleApp : Application() {
 

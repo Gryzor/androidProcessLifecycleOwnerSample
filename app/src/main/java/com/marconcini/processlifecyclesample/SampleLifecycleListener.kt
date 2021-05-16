@@ -1,25 +1,23 @@
 package com.marconcini.processlifecyclesample
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.LifecycleObserver
-import android.arch.lifecycle.OnLifecycleEvent
 import android.util.Log
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ProcessLifecycleOwner
 
 /**
- * Tracks the Lifecycle of the whole application thanks to {@link LifecycleObserver}.
- * This is registered via {@link ProcessLifecycleOwner#get()} ()}. The events are designed
+ * Tracks the Lifecycle of the whole application thanks to [DefaultLifecycleObserver].
+ * This is registered via [ProcessLifecycleOwner] The events are designed
  * to be dispatched with delay (by design) so activity rotations don't trigger these calls.
  * See: https://developer.android.com/reference/android/arch/lifecycle/ProcessLifecycleOwner.html
  */
-class SampleLifecycleListener : LifecycleObserver {
+class SampleLifecycleListener : DefaultLifecycleObserver {
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun onMoveToForeground() {
+    override fun onStart(owner: LifecycleOwner) {
         Log.d("SampleLifecycle", "Returning to foreground…")
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    fun onMoveToBackground() {
+    override fun onStop(owner: LifecycleOwner) {
         Log.d("SampleLifecycle", "Moving to background…")
     }
 }
