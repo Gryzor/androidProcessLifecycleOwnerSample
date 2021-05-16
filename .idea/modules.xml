@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/androidProcessLifecycleOwnerSample.iml" filepath="$PROJECT_DIR$/.idea/androidProcessLifecycleOwnerSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidProcessLifecycleOwnerSample.iml" filepath="$PROJECT_DIR$/androidProcessLifecycleOwnerSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidProcessLifecycleOwnerSample.iml" filepath="$PROJECT_DIR$/.idea/modules/androidProcessLifecycleOwnerSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/androidProcessLifecycleOwnerSample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/androidProcessLifecycleOwnerSample.app.iml" />
     </modules>
   </component>
 </project>

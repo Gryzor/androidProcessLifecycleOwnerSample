@@ -5,14 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.marconcini.processlifecyclesample"
         minSdkVersion 23
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -24,22 +24,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$appcompatv7_version"
-    implementation "com.android.support.constraint:constraint-layout:$constraintlayout_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     // Google Lifecycle Components
-    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
-
-    // "runtime" doesn't work atm, use `extensions` for now.
-    // implementation "android.arch.lifecycle:runtime:$lifecycle_version"
-
-    // This gives an error atm, so use the standard `compiler` version above.
-    // implementation "android.arch.lifecycle:common-java8:1.1.1"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.1'
 
     // TESTING LIBS
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
